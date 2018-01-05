@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from '@/analysis/index'
 
 Vue.use(VueRouter)
 
@@ -12,32 +11,20 @@ function load (component) {
 export default new VueRouter({
   routes: [
     // { path: '/', component: load('index') },
-    { path: '/', redirect: '/analysis' },
+    { path: '/', redirect: '/analysis/index' },
     {
-      path: '/analysis',
-      component: index,
-      children: [
-        {
-          path: 'content/sensor',
-          component: load(`analysis/content/sensor`),
-          meta: {
-            title: `数据`,
-            backRoute: '/',
-            showRank: true
-          }
-        },
-        {
-          path: 'content/my',
-          component: load(`analysis/content/my`),
-          meta: {
-            title: `个人`,
-            backRoute: '/',
-            showRank: true
-          }
-        }
-      ]
-    }
+      path: '/analysis/index',
+      component: load('analysis/index')
+    },
+    {
+      path: '/analysis/sensor',
+      component: load('analysis/sensor')
+    },
+    {
+      path: '/analysis/my',
+      component: load('analysis/my')
+    },
     // Always leave this last one
-    // { path: '*', component: load('Error404') } // Not found
+    { path: '*', component: load('Error404') } // Not found
   ]
 })
