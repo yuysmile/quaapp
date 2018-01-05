@@ -24,8 +24,8 @@
       <q-tab default count="5" slot="title" name="tab-1" icon="message" @click="go('/analysis')">数据获取</q-tab>
       <!-- <q-tab disable slot="title" name="tab-2" icon="fingerprint" /> -->
       <!-- <q-tab alert slot="title" name="tab-3" icon="account_box" /> -->
-      <q-tab slot="title" name="tab-4" icon="accessibility" @click="go('/analysis/content/sensor')">数据分析</q-tab>
-      <q-tab slot="title" name="tab-5" icon="account circle" @click="go('/analysis/content/my')">个人中心</q-tab>
+      <q-tab slot="title" name="tab-4" icon="accessibility" @click="go('/analysis/sensor')">数据分析</q-tab>
+      <q-tab slot="title" name="tab-5" icon="account circle" @click="go('/analysis/my')">个人中心</q-tab>
   </q-tabs>
   </div>
 </template>
