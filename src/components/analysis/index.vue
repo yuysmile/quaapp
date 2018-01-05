@@ -1,14 +1,8 @@
 <template>
   <div>
-    <q-toolbar color="primary">
+    <q-toolbar color="secondary">
 	  <q-toolbar-title>
-	    <q-btn
-        flat
-        @click="rotate"
-      >
-        <q-icon name="menu" />
-      </q-btn>
-      <span style="fontSize:1rem;">人体行为分析</span>
+      <span style="fontSize:1rem;">传感器数据获取</span>
 	  </q-toolbar-title>
 	  <q-btn flat round small>
 	    <q-icon name="account circle" />
@@ -39,12 +33,40 @@
 
 <!-- 主页下侧的内容 -->
 	<div>
-	    <q-card color='blue-grey-1'>
+	    <q-card>
             <q-card-main>
-
+				加速度传感器
+            </q-card-main>
+        </q-card>
+        <q-card>
+            <q-card-main>
+				重力传感器
+            </q-card-main>
+        </q-card>
+        <q-card>
+            <q-card-main>
+				陀螺仪传感器
+            </q-card-main>
+        </q-card>
+        <q-card>
+            <q-card-main>
+				旋转向量
+            </q-card-main>
+        </q-card>
+        <q-card>
+            <q-card-main>
+				距离传感器
             </q-card-main>
         </q-card>
 	</div>
+	<q-tabs color="blue-grey-3" class='select-bar'>
+	  <!-- Tabs - notice slot="title" -->
+	  <q-tab default count="5" slot="title" name="tab-1" icon="message" />
+	  <q-tab disable slot="title" name="tab-2" icon="fingerprint" />
+	  <q-tab alert slot="title" name="tab-3" icon="account_box" />
+	  <q-tab slot="title" name="tab-4" icon="accessibility" />
+	  <q-tab slot="title" name="tab-5" icon="build" />
+	</q-tabs>
   </div>
 </template>
 
@@ -72,4 +94,8 @@ export default{
   top: 0px
   width: 100%
   height: 100%
+.select-bar
+  position: absolute
+  bottom: 0px
+  width: 100%
 </style>
