@@ -11,8 +11,14 @@ require(`quasar/dist/quasar.${__THEME}.css`)
 // require(`quasar/dist/quasar.ie.${__THEME}.css`)
 
 import Vue from 'vue'
-import Quasar from 'quasar'
+// import Quasar from 'quasar'
 import router from './router'
+
+// 全局使用Q组件
+import Quasar, * as Components from 'quasar'
+Vue.use(Quasar, {
+  components: Components
+})
 
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
@@ -26,10 +32,13 @@ import 'quasar-extras/material-icons'
 // import 'quasar-extras/animate'
 
 Quasar.start(() => {
+  // document.addEventListener('deviceready', () => {
   /* eslint-disable no-new */
   new Vue({
     el: '#q-app',
     router,
     render: h => h(require('./App').default)
   })
+  //   window.navigator.splashscreen.hide()
+  // }, false)
 })
