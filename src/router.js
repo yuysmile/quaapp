@@ -21,12 +21,10 @@ export default new VueRouter({
     },
     {
       path: '/analysis/content/sensor',
-      // component: sensor,
       component: load('analysis/content/sensor')
     },
     {
       path: '/analysis/content/my',
-      // component: my,
       component: load('analysis/content/my')
     },
     // Always leave this last one
