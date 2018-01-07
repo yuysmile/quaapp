@@ -20,7 +20,7 @@
           <q-btn
             color="primary"
             push
-            @click="$router.replace('/analysis/content/index')"
+            @click="$router.replace('/analysis/content')"
             icon-right="home"
           >
             Go home

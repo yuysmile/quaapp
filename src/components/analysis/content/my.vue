@@ -1,5 +1,8 @@
 <template>
   <div slot="left"  class="left-menu">
+  	<div class="title">
+  <span style="background-image:url(../../../../dist/statics/1.png);"></span>
+  	</div>
     <q-list no-border link inset-delimiter>
       <q-list-header style='background:'>传感器数据分析 <span style="float:right;margin-right:10px;">></span></q-list-header>
       <q-item @click="launch('http://quasar-framework.org')">
@@ -19,14 +22,11 @@
         <q-item-main label="退出登陆"/>
       </q-item>
     </q-list>
-    <q-tabs color="blue-grey-3" class='select-bar'>
-      <!-- Tabs - notice slot="title" -->
-      <q-tab default count="5" slot="title" name="tab-1" icon="message" @click="go('/analysis')">数据获取</q-tab>
-      <!-- <q-tab disable slot="title" name="tab-2" icon="fingerprint" /> -->
-      <!-- <q-tab alert slot="title" name="tab-3" icon="account_box" /> -->
-      <q-tab slot="title" name="tab-4" icon="accessibility" @click="go('/analysis/sensor')">数据分析</q-tab>
-      <q-tab slot="title" name="tab-5" icon="account circle" @click="go('/analysis/my')">个人中心</q-tab>
-  </q-tabs>
+    <q-tabs color="blue-grey-3" class='select-bar' id="tabs">
+	    <q-tab slot="title" name="tab-1" icon="message" @click="go('/analysis/content')">数据获取</q-tab>
+	  	  <q-tab slot="title" name="tab-4" icon="accessibility" @click="go('/analysis/content/sensor')">数据分析</q-tab>
+	  	  <q-tab slot="title" name="tab-5" icon="account circle" @click="go('/analysis/content/my')">个人中心</q-tab>
+		</q-tabs>
   </div>
 </template>
 <script>
@@ -43,4 +43,8 @@ export default {
   position: absolute
   bottom: 0px
   width: 100%
+.title
+  display: block
+  width: 100%
+  height: 10px
 </style>
