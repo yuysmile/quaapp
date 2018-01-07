@@ -15,52 +15,52 @@
             <q-card-main class="long">
               <span class="image" style="background-Image:url(../../statics/加速度.jpg);"></span>
               <span class="font">加速度传感器</span>
-              <span @click="" class="detail">查看</span>
+              <span @click="go('analysis/content/detail/acceleration')" class="detail">查看</span>
             </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long"><span class="image"  style="background-Image:url(../../statics/重力.jpg);"></span>
                   <span class="font">重力传感器</span>
-                  <span @click="" class="detail">查看</span>
+                  <span @click="go('analysis/content/detail/gravity')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long"><span class="image" style="background-Image:url(../../statics/陀螺仪.jpg);"></span>
             <span class="font">陀螺仪传感器</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/gyroscope')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long"><span class="image" style="background-Image:url(../../statics/旋转.jpg);"></span>
             <span class="font">旋转向量</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/rotate')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long"><span class="image" style="background-Image:url(../../statics/直尺.jpg);"></span>
             <span class="font">距离传感器</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/distance')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long">
                   <span class="image" style="background-Image:url(../../statics/灯泡.jpg);"></span>
             <span class="font">光照传感器</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/Illumination')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long">
                   <span class="image" style="background-Image:url(../../statics/GPS.png);"></span>
             <span class="font">位置传感器</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/GPS')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
             <q-card>
                 <q-card-main class="long">
                   <span class="image" style="background-Image:url(../../statics/声音.jpg);"></span>
             <span class="font">声压传感器</span>
-            <span @click="" class="detail">查看</span>
+            <span @click="go('analysis/content/detail/sound')" class="detail">查看</span>
                 </q-card-main>
             </q-card>
         </div>
@@ -87,12 +87,12 @@ export default{
     auto () {
       var content = document.getElementById('content')
       var Height = document.documentElement.clientHeight
-      var barheight = document.getElementById('bar')
-      var tabsheight = document.getElementById('tabs')
+      var barheight = document.getElementById('bar').style.height
+      var tabsheight = document.getElementById('tabs').style.height
       content.style.height = Height - barheight - tabsheight + 'px'
     }
   },
-  created () {
+  mounted () {
     this.auto()
   }
 }

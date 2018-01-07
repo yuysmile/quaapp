@@ -17,7 +17,45 @@ export default new VueRouter({
     { path: '/', redirect: '/analysis/content' },
     {
       path: '/analysis/content',
-      component: index
+      component: index,
+      children: [
+        {
+          path: '/detail/sound',
+          component: load(`analysis/content/detail/sound`)
+        },
+        {
+          path: '/detail/acceleration',
+          component: load(`analysis/content/detail/acceleration`)
+        },
+        {
+          path: '/detail/distance',
+          component: load(`analysis/content/detail/distance`)
+        },
+        {
+          path: '/detail/GPS',
+          component: load(`analysis/content/detail/GPS`)
+        },
+        {
+          path: '/detail/gravity',
+          component: load(`analysis/content/detail/gravity`)
+        },
+        {
+          path: '/detail/gyroscope',
+          component: load(`analysis/content/detail/gyroscope`)
+        },
+        {
+          path: '/detail/Illumination',
+          component: load(`analysis/content/detail/Illumination`)
+        },
+        {
+          path: '/detail/rotate',
+          component: load(`analysis/content/detail/rotate`)
+        },
+        {
+          path: '/detail/sound',
+          component: load(`analysis/content/detail/sound`)
+        }
+      ]
     },
     {
       path: '/analysis/content/sensor',

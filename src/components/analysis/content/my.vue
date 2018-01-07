@@ -1,26 +1,27 @@
 <template>
   <div slot="left"  class="left-menu">
   	<div class="title">
-  <span style="background-image:url(../../../../dist/statics/1.png);"></span>
+  		<!--<img :src="../../../../dist/statics/声音.jpg"/>
+  <span style="background-image:url(../../../../dist/statics/声音.jpg);"></span>-->
   	</div>
     <q-list no-border link inset-delimiter>
       <q-list-header style='background:'>传感器数据分析 <span style="float:right;margin-right:10px;">></span></q-list-header>
-      <q-item @click="launch('http://quasar-framework.org')">
+      <q-item @click="" class="quote">
         <q-item-side icon="school" />
-        <q-item-main label="个人数据中心"/>
+        <q-item-main label="我的传感器"/>
       </q-item>
-      <q-item @click="launch('http://forum.quasar-framework.org')">
+      <q-item @click="" class="quote">
         <q-item-side icon="record_voice_over" />
-        <q-item-main label="设置"/>
+        <q-item-main label="关于"/>
       </q-item>
-      <q-item @click="launch('https://gitter.im/quasarframework/Lobby')">
+      <q-item @click="" class="quote">
         <q-item-side icon="chat" />
-        <q-item-main label="数据表分析"/>
-      </q-item>
-      <q-item @click="launch('https://twitter.com/quasarframework')">
-        <q-item-side icon="rss feed" />
         <q-item-main label="退出登陆"/>
       </q-item>
+      <!--<q-item @click="">
+        <q-item-side icon="rss feed" />
+        <q-item-main label="退出登陆"/>
+      </q-item>-->
     </q-list>
     <q-tabs color="blue-grey-3" class='select-bar' id="tabs">
 	    <q-tab slot="title" name="tab-1" icon="message" @click="go('/analysis/content')">数据获取</q-tab>
@@ -47,4 +48,6 @@ export default {
   display: block
   width: 100%
   height: 10px
+.quote
+   border-bottom: 1px rgb(239,239,239)
 </style>
