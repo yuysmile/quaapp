@@ -4,9 +4,9 @@
   	  <q-toolbar-title>
         <span style="fontSize:1rem;">传感器数据获取</span>
   	  </q-toolbar-title>
-  	  <q-btn flat round small>
+  	  <!--<q-btn flat round small>
   	    <q-icon name="build" />
-  	  </q-btn>
+  	  </q-btn>-->
 	  </q-toolbar>
     <!-- 主页下侧的内容 -->
     <q-scroll-area  id="content">

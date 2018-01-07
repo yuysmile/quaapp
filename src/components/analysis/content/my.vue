@@ -1,8 +1,8 @@
 <template>
   <div slot="left"  class="left-menu">
   	<div class="title">
-  		<!--<img :src="../../../../dist/statics/声音.jpg"/>
-  <span style="background-image:url(../../../../dist/statics/声音.jpg);"></span>-->
+  		<img :src='image'/>
+  <!--<span style="background-image:url(../../../../dist/statics/声音.jpg);"></span>-->
   	</div>
     <q-list no-border link inset-delimiter>
       <q-list-header style='background:'>传感器数据分析 <span style="float:right;margin-right:10px;">></span></q-list-header>
@@ -18,10 +18,6 @@
         <q-item-side icon="chat" />
         <q-item-main label="退出登陆"/>
       </q-item>
-      <!--<q-item @click="">
-        <q-item-side icon="rss feed" />
-        <q-item-main label="退出登陆"/>
-      </q-item>-->
     </q-list>
     <q-tabs color="blue-grey-3" class='select-bar' id="tabs">
 	    <q-tab slot="title" name="tab-1" icon="message" @click="go('/analysis/content')">数据获取</q-tab>
@@ -32,6 +28,11 @@
 </template>
 <script>
 export default {
+  data () {
+    return {
+      image: '../../../statics/1.jpg'
+    }
+  },
   methods: {
     go (url) {
       this.$router.push({path: url})
