@@ -12,9 +12,9 @@
 	    <q-card-main >
 	      <img :src='image' style="" style="margin:8px auto;"/>
 	      <span style="display: block;height: 100px;float:right;margin-bottom: 30px;margin-left: 30px;">
-	      	<div>X轴数据<span style="margin-left: 60px;">{{Xdata}}m/s<sup>2</sup></span></div>
-	      	<div>Y轴数据<span style="margin-left: 60px;">{{Ydata}}m/s<sup>2</sup></span></div>
-	      	<div>Z轴数据<span style="margin-left: 60px;">{{Zdata}}m/s<sup>2</sup></span></div>
+	      	<div>X轴数据:<span style="margin-left: 60px;">{{Xdata}}m/s<sup>2</sup></span></div>
+	      	<div>Y轴数据:<span style="margin-left: 60px;">{{Ydata}}m/s<sup>2</sup></span></div>
+	      	<div>Z轴数据:<span style="margin-left: 60px;">{{Zdata}}m/s<sup>2</sup></span></div>
 	      </span>
 	    </q-card-main>
 	</q-card>

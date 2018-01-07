@@ -1,24 +1,24 @@
 <template>
   <div slot="left"  class="left-menu">
-  	<div class="title">
-  		<img :src='image'/>
-  <!--<span style="background-image:url(../../../../dist/statics/声音.jpg);"></span>-->
-  	</div>
-    <q-list no-border link inset-delimiter>
-      <q-list-header style='background:'>传感器数据分析 <span style="float:right;margin-right:10px;">></span></q-list-header>
-      <q-item @click="" class="quote">
-        <q-item-side icon="school" />
-        <q-item-main label="我的传感器"/>
-      </q-item>
-      <q-item @click="" class="quote">
-        <q-item-side icon="record_voice_over" />
-        <q-item-main label="关于"/>
-      </q-item>
-      <q-item @click="" class="quote">
-        <q-item-side icon="chat" />
-        <q-item-main label="退出登陆"/>
-      </q-item>
-    </q-list>
+	  	<div class="title" style="display: block;position:absolute;left:50%;top: 10%;transform: translate(-50%,-50%);width: 78px;height: 78px;border:1px solid #ADADAD;border-radius:100%;">
+	    <img :src='image' width="78px" height="70px"/>
+	  	</div>
+	  	<div style="position:absolute;top: 120px;">
+	  	  <q-list no-border link inset-delimiter>
+	      <q-item @click="" class="quote">
+	        <q-item-side icon="school" />
+	        <q-item-main label="我的传感器"/>
+	      </q-item>
+	      <q-item @click="" class="quote">
+	        <q-item-side icon="record_voice_over" />
+	        <q-item-main label="关于"/>
+	      </q-item>
+	      <q-item @click="" class="quote">
+	        <q-item-side icon="chat" />
+	        <q-item-main label="退出"/>
+	      </q-item>
+    		</q-list>
+	  	</div>
     <q-tabs color="blue-grey-3" class='select-bar' id="tabs">
 	    <q-tab slot="title" name="tab-1" icon="message" @click="go('/analysis/content')">数据获取</q-tab>
 	  	  <q-tab slot="title" name="tab-4" icon="accessibility" @click="go('/analysis/content/sensor')">数据分析</q-tab>
@@ -30,7 +30,7 @@
 export default {
   data () {
     return {
-      image: '../../../statics/1.jpg'
+      image: '../../statics/person.png'
     }
   },
   methods: {

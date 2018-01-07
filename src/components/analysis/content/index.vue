@@ -89,7 +89,7 @@ export default{
       var Height = document.documentElement.clientHeight
       var barheight = document.getElementById('bar').style.height
       var tabsheight = document.getElementById('tabs').style.height
-      content.style.height = Height - barheight - tabsheight + 'px'
+      content.style.height = Height - barheight - tabsheight + 50 + 'px'
     }
   },
   mounted () {
@@ -100,7 +100,7 @@ export default{
 
 <style lang="stylus">
 #bar
-  position: fixed
+  position: absolute
   top: 0px
   left: 0px
 #content

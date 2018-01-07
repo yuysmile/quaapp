@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import index from '@/analysis/content/index'
 import sensor from '@/analysis/content/sensor'
 import my from '@/analysis/content/my'
+import login from '@/analysis/login'
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,11 @@ function load (component) {
 
 export default new VueRouter({
   routes: [
-    { path: '/', redirect: '/analysis/content' },
+    { path: '/', redirect: '/analysis' },
+    {
+      path: '/analysis',
+      component: login
+    },
     {
       path: '/analysis/content',
       component: index
