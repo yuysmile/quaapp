@@ -13,49 +13,46 @@ function load (component) {
 
 export default new VueRouter({
   routes: [
-    // { path: '/', component: load('index') },
     { path: '/', redirect: '/analysis/content' },
     {
       path: '/analysis/content',
-      component: index,
-      children: [
-        {
-          path: '/detail/sound',
-          component: load(`analysis/content/detail/sound`)
-        },
-        {
-          path: '/detail/acceleration',
-          component: load(`analysis/content/detail/acceleration`)
-        },
-        {
-          path: '/detail/distance',
-          component: load(`analysis/content/detail/distance`)
-        },
-        {
-          path: '/detail/GPS',
-          component: load(`analysis/content/detail/GPS`)
-        },
-        {
-          path: '/detail/gravity',
-          component: load(`analysis/content/detail/gravity`)
-        },
-        {
-          path: '/detail/gyroscope',
-          component: load(`analysis/content/detail/gyroscope`)
-        },
-        {
-          path: '/detail/Illumination',
-          component: load(`analysis/content/detail/Illumination`)
-        },
-        {
-          path: '/detail/rotate',
-          component: load(`analysis/content/detail/rotate`)
-        },
-        {
-          path: '/detail/sound',
-          component: load(`analysis/content/detail/sound`)
-        }
-      ]
+      component: index
+    },
+    {
+      path: '/analysis/content/detail/sound',
+      component: load('analysis/content/detail/sound')
+    },
+    {
+      path: '/analysis/content/detail/acceleration',
+      component: load('analysis/content/detail/acceleration')
+    },
+    {
+      path: '/analysis/content/detail/distance',
+      component: load('analysis/content/detail/distance')
+    },
+    {
+      path: '/analysis/content/detail/GPS',
+      component: load('analysis/content/detail/GPS')
+    },
+    {
+      path: '/analysis/content/detail/gravity',
+      component: load('analysis/content/detail/gravity')
+    },
+    {
+      path: '/analysis/content/detail/gyroscope',
+      component: load('analysis/content/detail/gyroscope')
+    },
+    {
+      path: '/analysis/content/detail/Illumination',
+      component: load('analysis/content/detail/Illumination')
+    },
+    {
+      path: '/analysis/content/detail/rotate',
+      component: load('analysis/content/detail/rotate')
+    },
+    {
+      path: '/analysis/content/detail/sound',
+      component: load('analysis/content/detail/sound')
     },
     {
       path: '/analysis/content/sensor',
