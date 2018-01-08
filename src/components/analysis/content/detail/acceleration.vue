@@ -54,8 +54,6 @@ export default{
     back () {
       window.history.go(-1)
     },
-    getAccelerate () {
-    },
     getrtData (opt) {
       axios.get('/aj/click', {newsid: opt.newsid}).then(res => {
         if (res && res.length === 0) {
