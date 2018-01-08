@@ -1,6 +1,6 @@
 <template>
   <div slot="left"  class="left-menu">
-	  	<div class="title" style="display: block;position:absolute;left:50%;top: 10%;transform: translate(-50%,-50%);width: 78px;height: 78px;border:1px solid #ADADAD;border-radius:100%;">
+	  	<div class="title" style="display: block;position:absolute;left:50%;top: 10%;transform: translate(-50%,-50%);width: 78px;height: 78px;">
 	    <img :src='image' width="78px" height="70px"/>
 	  	</div>
 	  	<div style="position:absolute;top: 120px;">
@@ -13,7 +13,7 @@
 	        <q-item-side icon="record_voice_over" />
 	        <q-item-main label="关于"/>
 	      </q-item>
-	      <q-item @click="" class="quote">
+	      <q-item @click="go('/analysis')" class="quote">
 	        <q-item-side icon="chat" />
 	        <q-item-main label="退出"/>
 	      </q-item>
@@ -50,5 +50,6 @@ export default {
   width: 100%
   height: 10px
 .quote
-   border-bottom: 1px rgb(239,239,239)
+  width: 1000px
+  border-bottom: 1px rgb(239,239,239)
 </style>
